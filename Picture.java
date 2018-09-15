@@ -14,6 +14,7 @@ public class Picture
     private Square wall;
     private Square window;
     private Triangle roof;
+    private Triangle pyramid;
     private Circle sun;
     private Person me;
     private boolean drawn;
@@ -26,7 +27,8 @@ public class Picture
         wall = new Square();
         me = new Person();
         window = new Square();
-        roof = new Triangle();  
+        roof = new Triangle();
+        pyramid = new Triangle();
         sun = new Circle();
         drawn = false;
     }
@@ -53,10 +55,16 @@ public class Picture
             roof.moveHorizontal(20);
             roof.moveVertical(-60);
             roof.makeVisible();
-    
+            
+            pyramid.changeColor("yellow");
+            pyramid.changeSize(120, 200);
+            pyramid.moveHorizontal(-80);
+            pyramid.moveVertical(-40);
+            pyramid.makeVisible();
+            
             sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
+            sun.moveHorizontal(120);
+            sun.moveVertical(-80);
             sun.changeSize(80);
             sun.makeVisible();
             
@@ -85,6 +93,7 @@ public class Picture
         wall.changeColor("red");
         window.changeColor("black");
         roof.changeColor("green");
+        pyramid.changeColor("yellow");
         sun.changeColor("yellow");
     }
 }
